@@ -1,0 +1,50 @@
+.section
+  %img.homepage-image.absolute(src="https://unsplash.imgix.net/photo-1417962798089-0c93ceaed88a?q=75&fm=jpg&s=2da8b1d69ce267ad866bf4d6477d1ae7")
+.section
+  .row.push-down
+    .small-12.columns.centered
+      %h2.homepage-title
+        .thick-title
+          TryPaper.com Document Uploader
+        .thin-title
+          | Mail PDF Files to Physical Addresses
+        %hr.white
+        .small-10.small-centered.column.pull-left
+          %ul.no-bullet
+            %li.homepage-bullet
+              1. Sign Up for Free
+              %span.sup *
+              by Texting the word VOCAB to 720-897-3141
+            %li.homepage-bullet 2. Text a Word You Don't Know to 720-897-3141
+            %li.homepage-bullet 3. App will Fetch Defintion and Add it to Your Personal Page
+            %li.homepage-bullet
+              4. Visit http://app.com/5555555555
+              %span.tiny (your phone number)
+              to see your words
+            %li.homepage-bullet 5. Study Words to Increase Your Vocabulary & Expand Your Horizons
+            %hr.white
+            %dl.accordion{data: {accordion: ''}}
+              %dd.accordion-navigation
+                %a.centered{ :href => "#panel1", :style => "width: 381px; margin-left: 25%;"} Curious How It Works? Click for Details.
+                #panel1.content.opaque
+                  %ul.no-bullet
+                    %li.info-bullet 1. Twilio API receives text message & verifies incoming number is a known user
+                    %li.info-bullet 2. Create user process starts if unknown user
+                    %li.info-bullet 3. For known user, Twilio passes word to Dictionary API
+                    %li.info-bullet 4. App queries Dictionary API and parses XML response
+                    %li.info-bullet 5. Word & definition added to user defintion and shown on user page
+  .row
+    .small-12.small-centered.columns.centered
+      %p.white
+        Powered by the
+        %a.orange{:href => "http://trypaper.com", :target => "_blank" } TryPaper.com
+        |
+        Built by
+        %a.orange{:href => "http://pmichaeljones.herokuapp.com", :target => "_blank" } Patrick Jones
+        \|
+        Credit to
+        %a.orange{:href => "http://unsplash.com", :target => "_blank" } UnSplash
+        for the Great Background Picture!
+      %span.tiny.white
+        * Normal Texting Rates Apply. It's Just Like Sending a Text to a Friend
+
