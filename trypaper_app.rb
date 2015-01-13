@@ -6,3 +6,7 @@ get '/' do
   haml :index
 end
 
+post '/upload_document' do
+  #binding.pry
+end
+

@@ -40,9 +40,10 @@
               %input.radius{:placeholder => "55555", :type => "text", :name => "zipcode"}
             %hr.white
             .small-12.large-7.columns
-              %input{:placeholder => "sales_invoice_2015.pdf", :type => "file", :name => "uploaded_file"}
+              %label.white Upload File
+              %input.radius{:placeholder => "sales_invoice_2015.pdf", :type => "file", :name => "uploaded_file", :accept => "application/pdf"}
             .small-12.large-5.columns.centered
-              %input.button.radius.orange-button.push-down-button{:type => "submit"} Print & Mail Document
+              %input.button.radius.orange-button.push-down-button{:type => "submit", :value => "Print & Mail Document"}
       %hr.white
         %p.white.centered
           Powered by

@@ -5,10 +5,20 @@ label {
 
 .orange-button {
   background-color: orange;
+  width: 75%;
 }
 
 .push-down-button {
   margin-top: 19px;
+}
+
+input[type="file"] {
+  background: white;
+  color: black;
+  font-size: 14px;
+  height: 30px;
+  border-radius: 2px;
+  padding: 5px 0px 0px 5px;
 }
 
 .absolute {
