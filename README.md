@@ -1,4 +1,4 @@
-### Document Uploading App for [TryPaper.com]("http://trypaper.com")
+### Document Uploading App for TryPaper.com
 ---
 1. From TryPaper.com dashboard, copy and paste the following values:
   - API Key
