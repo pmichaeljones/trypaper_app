@@ -22,25 +22,25 @@
             %hr.white
             .small-12.columns
               %label.white Recipient Name
-              %input.radius{:placeholder => "John Doe IV", :type => "text", :name => "name"}
+              %input.radius{:placeholder => "Johnny Appleseed", :type => "text", :name => "name"}
             .small-12.large-6.columns
               %label.white Address
-              %input.radius{:placeholder => "555 Main Street", :type => "text", :name => "address1"}
+              %input.radius{:placeholder => "555 Pumpkin Lane", :type => "text", :name => "address1"}
             .small-12.large-6.columns
-              %label.white Address Cont'd
-              %input.radius{:placeholder => "Apt 1 (optional)", :type => "text", :name => "address2"}
+              %label.white Address Cont'd (Optional)
+              %input.radius{:placeholder => "Apt 1", :type => "text", :name => "address2"}
             .small-12.large-5.columns
               %label.white City
-              %input.radius{:placeholder => "Cityville", :type => "text", :name => "city"}
+              %input.radius{:placeholder => "Veggieville", :type => "text", :name => "city"}
             .small-6.large-4.columns
               %label.white State
-              %input.radius{:placeholder => "WI (2-letter abbreviation)", :type => "text", :name => "state"}
+              %input.radius{:placeholder => "WI (2-Letter Abbreviation)", :maxlength => 2, :type => "text", :name => "state"}
             .small-6.large-3.columns
               %label.white Zipcode
-              %input.radius{:placeholder => "55555", :type => "text", :name => "zipcode"}
+              %input.radius{:placeholder => "55555", :type => "text", :maxlength => 5, :name => "zipcode"}
             %hr.white
             .small-12.large-6.column
-              %label.white Print Quantity
+              %label.white.has-tip{:title => "Single: Print Document Once <br> Duplicate: Print Document Twice <br> Triplicate: Print Three Times", data:{tooltip:'', html:true}, aria:{haspopup:"true"} }Print Quantity
               %input{:type => "radio", :name => "quantity", :value =>"Single", :id => "quantitySingle"}
               %label.white{:for => "quantitySingle"} Single
               %input{:type => "radio", :name => "quantity", :value =>"Duplicate", :id => "quantityDuplicate"}
@@ -48,7 +48,7 @@
               %input{:type => "radio", :name => "quantity", :value =>"Triplicate", :id => "quantityTriplicate"}
               %label.white{:for => "quantityTriplicate"} Triplicate
             .small-12.large-6.column
-              %label.white Optional Tags
+              %label.white.has-tip{:title => "Duplex: Front & Back Printing <br> B & W: Print Color Document in B&W", data:{tooltip:'', html:true}, aria:{haspopup:"true"} } Optional Printing Tags
               %input{:name => 'optional_tags[]', :id => "duplex", :value => "duplex", :type => "checkbox" }
               %label.white{:for => "duplex"} Duplex
               %input{:name => 'optional_tags[]', :id => "blackwhite", :value => "force_bw", :type => "checkbox" }
@@ -59,6 +59,11 @@
               %input.radius{:placeholder => "sales_invoice_2015.pdf", :type => "file", :name => "uploaded_file", :accept => "application/pdf"}
             .small-12.large-5.columns.centered
               %input.button.radius.orange-button.push-down-button{:type => "submit", :value => "Print & Mail Document"}
+            .small-12.column.centered
+              - if @api_reply
+                .alert-box.info.radius{data:{alert:''}}
+                  = @api_reply
+                  %a.close{:href => "#"} x
       %hr.white
         %p.white.centered
           Powered by
@@ -69,4 +74,4 @@
           \|
           Credit to
           %a.orange{:href => "http://unsplash.com", :target => "_blank" } UnSplash
-          for the Great Background Picture!
+          for the Amazing Background Picture!
