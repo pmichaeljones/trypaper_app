@@ -7,6 +7,6 @@ get '/' do
 end
 
 post '/upload_document' do
-  #binding.pry
+  binding.pry
 end
 

@@ -10,7 +10,7 @@
           Mail PDF Files to Physical Addresses
       %hr.white
       .small-10.small-centered.columns
-        %form{:action => "/upload_document", :method => "POST"}
+        %form{:action => "/upload_document", :enctype => "multipart/form-data", :method => "POST"}
           %fieldset
             %legend TryPaper.com Document Uploader
             .small-12.large-6.columns
