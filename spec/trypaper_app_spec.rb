@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 
 describe 'TryPaper Web App' do
 
@@ -7,15 +7,24 @@ describe 'TryPaper Web App' do
   end
 
   describe "GET '/'" do
-    it 'should render index template' do
+    it 'responds successfully' do
       get '/'
-      expect(response).to render_tempate :view
+      last_response.status.must_equal 200
+    end
+
+    it 'renders index template' do
+      get '/'
+      last_response.body.must_include "TryPaper.com PDF Mailing App"
     end
 
   end
 
   describe "POST '/upload_document'" do
-    it 'should accept params'
+
+    it 'should accept params' do
+      post '/upload_document'
+    end
+
     it 'should verify existence of name'
     it 'should verify existence of address1'
     it 'should verify existence of city'

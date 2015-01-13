@@ -11,8 +11,6 @@ gem "trypaper", '1.0.0'
 
 group :test do
   gem "rack-test"
-  gem "rspec"
-  gem "shoulda-matchers"
 end
 
 group :development do
