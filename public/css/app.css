@@ -3,6 +3,14 @@ label {
   font-weight: 200;
 }
 
+.orange-button {
+  background-color: orange;
+}
+
+.push-down-button {
+  margin-top: 19px;
+}
+
 .absolute {
   position: absolute;
 }

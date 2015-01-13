@@ -10,11 +10,11 @@
           Mail PDF Files to Physical Addresses
       %hr.white
       .small-10.small-centered.columns
-        %form
+        %form{:action => "/upload_document", :method => "POST"}
           %fieldset
             %legend TryPaper.com Document Uploader
             .small-12.large-6.columns
-              %label.white TryPaper Production API Key
+              %label.white TryPaper API Key
               %input.radius{:placeholder => "EXAMPLE5555API42342KEY", :type => "text", :name => "api_key"}
             .small-12.large-6.columns
               %label.white TryPaper Return Address ID
@@ -38,7 +38,11 @@
             .small-6.large-3.columns
               %label.white Zipcode
               %input.radius{:placeholder => "55555", :type => "text", :name => "zipcode"}
-
+            %hr.white
+            .small-12.large-7.columns
+              %input{:placeholder => "sales_invoice_2015.pdf", :type => "file", :name => "uploaded_file"}
+            .small-12.large-5.columns.centered
+              %input.button.radius.orange-button.push-down-button{:type => "submit"} Print & Mail Document
       %hr.white
         %p.white.centered
           Powered by
