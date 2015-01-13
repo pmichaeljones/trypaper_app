@@ -9,6 +9,7 @@ gem "haml"
 gem "foundation"
 
 group :test do
+  gem "rack-test"
   gem "rspec"
   gem "shoulda-matchers"
 end

@@ -1,9 +1,17 @@
-require_relative 'spec_helper'
+require 'spec_helper'
 
-describe 'AppController' do
+describe 'TryPaper Web App' do
+
+  def app
+    Sinatra::Application
+  end
 
   describe "GET '/'" do
-    it 'should render index template'
+    it 'should render index template' do
+      get '/'
+      expect(response).to render_tempate :view
+    end
+
   end
 
   describe "POST '/upload_document'" do

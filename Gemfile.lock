@@ -82,6 +82,7 @@ DEPENDENCIES
   haml
   pg
   pry
+  rack-test
   rake
   rspec
   shotgun
