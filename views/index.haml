@@ -9,12 +9,18 @@
         .thin-title
           Mail PDF Files to Physical Addresses
       %hr.white
-      %form
-        .small-6.small-centered.columns
+      .small-6.small-centered.columns
+        %form
           %fieldset
             %legend Document Uploader
-
-        %p.white
+            .small-12.columns
+              %label.white TryPaper Production API Key
+              %input.radius{:placeholder => '"EXAMPLE5555API42342KEY"', :type => "text", :name => "api_key"}
+            .small-12.columns
+              %label.white TryPaper Return Address ID
+              %input.radius{:placeholder => '"555_main_street_HQ"', :type => "text", :name => "return_address_id"}
+      %hr.white
+        %p.white.centered
           Powered by
           %a.orange{:href => "http://trypaper.com", :target => "_blank" } TryPaper.com
           |

@@ -1,3 +1,8 @@
+label {
+  font-size: 18px;
+  font-weight: 200;
+}
+
 .absolute {
   position: absolute;
 }
