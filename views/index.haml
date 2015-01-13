@@ -2,18 +2,20 @@
   %img.homepage-image.absolute(src="https://unsplash.imgix.net/photo-1417962798089-0c93ceaed88a?q=75&fm=jpg&s=2da8b1d69ce267ad866bf4d6477d1ae7")
 .section
   .row.push-down
-    .small-12.columns.centered
-      %h1.homepage-title
+    .small-12.columns.homepage-title
+      %h1.centered.white
         .thick-title
           TryPaper.com Document Uploader
         .thin-title
           Mail PDF Files to Physical Addresses
-        %hr.white
-        .small-10.small-centered.column
-          %p
-            Form goes here
+      %hr.white
+      %form
+        .small-6.small-centered.columns
+          %fieldset
+            %legend Document Uploader
+
         %p.white
-          Powered by the
+          Powered by
           %a.orange{:href => "http://trypaper.com", :target => "_blank" } TryPaper.com
           |
           Built by
