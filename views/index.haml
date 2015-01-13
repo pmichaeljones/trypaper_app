@@ -39,6 +39,21 @@
               %label.white Zipcode
               %input.radius{:placeholder => "55555", :type => "text", :name => "zipcode"}
             %hr.white
+            .small-12.large-6.column
+              %label.white Print Quantity
+              %input{:type => "radio", :name => "quantity", :value =>"Single", :id => "quantitySingle"}
+              %label.white{:for => "quantityDuplex"} Single
+              %input{:type => "radio", :name => "quantity", :value =>"Duplicate", :id => "quantityDuplicate"}
+              %label.white{:for => "quantityDuplex"} Duplicate
+              %input{:type => "radio", :name => "quantity", :value =>"Triplicate", :id => "quantityTriplicate"}
+              %label.white{:for => "quantityDuplex"} Triplicate
+            .small-12.large-6.column
+              %label.white Optional Tags
+              %input{:id => "duplex", :type => "checkbox" }
+              %label.white{:for => "duplex"} Duplex
+              %input{:id => "force_bw", :type => "checkbox" }
+              %label.white{:for => "force_bw"} Black & White
+            %hr.white
             .small-12.large-7.columns
               %label.white Upload File
               %input.radius{:placeholder => "sales_invoice_2015.pdf", :type => "file", :name => "uploaded_file", :accept => "application/pdf"}

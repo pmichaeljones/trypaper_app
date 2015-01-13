@@ -7,6 +7,7 @@ gem "rake"
 gem "shotgun"
 gem "haml"
 gem "foundation"
+gem "trypaper", '1.0.0'
 
 group :test do
   gem "rack-test"
