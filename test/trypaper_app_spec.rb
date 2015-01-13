@@ -1,4 +1,4 @@
-require_relative 'spec_helper'
+require_relative 'test_helper'
 
 describe 'TryPaper Web App' do
 
@@ -22,8 +22,11 @@ describe 'TryPaper Web App' do
   describe "POST '/upload_document'" do
 
     it 'should accept params' do
-      post '/upload_document'
+      post '/upload_document', {:name => "Patrick"}
+      last_response.status.must_equal 200
     end
+
+
 
     it 'should verify existence of name'
     it 'should verify existence of address1'

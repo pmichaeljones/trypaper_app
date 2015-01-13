@@ -7,6 +7,7 @@ get '/' do
 end
 
 post '/upload_document' do
+  binding.pry
   @api_reply = "great job"
   haml :index
 end
