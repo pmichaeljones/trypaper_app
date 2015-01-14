@@ -1,4 +1,3 @@
-require "sinatra/activerecord/rake"
 require "./trypaper_app"
 
 task :default => :test
