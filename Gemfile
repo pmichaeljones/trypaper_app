@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
 gem "sinatra"
-gem "sinatra-activerecord"
-gem "sinatra-assetpack"
 gem "rake"
 gem "shotgun"
 gem "haml"
@@ -15,11 +13,9 @@ end
 
 group :development do
   gem 'pry'
-  gem 'sqlite3'
 end
 
 group :production do
-  gem 'pg'
 end
 
 
