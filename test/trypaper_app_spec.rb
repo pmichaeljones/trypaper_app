@@ -15,6 +15,7 @@ describe 'TryPaper Web App' do
     it 'renders index template' do
       get '/'
       last_response.body.must_include "TryPaper.com PDF Mailing App"
+      binding.pry
     end
 
   end
@@ -22,18 +23,17 @@ describe 'TryPaper Web App' do
   describe "POST '/upload_document'" do
 
     it 'should parse API key from params' do
-      post '/upload_document', {:name => "Patrick", :return_address_id => "555_main_street", :api_key => "FAKEKEY"}
-      binding.pry
-      @api_key.must_equal "FAKEKEY"
+      post '/upload_document', {:name => "Patrick", :return_address_id => RETURN_ADDRESS_ID, :api_key => TEST_API_KEY}
+     @api_key.must_equal TEST_API_KEY
     end
 
     it 'should parse return address ID from params' do
-      post '/upload_document', {:name => "Patrick", :return_address_id => "555_main_street", :api_key => "FAKEKEY"}
-      @return_id.must_equal "555_main_street"
+      post '/upload_document', {:name => "Patrick", :return_address_id => RETURN_ADDRESS_ID, :api_key => TEST_API_KEY}
+      @return_id.must_equal RETURN_ADDRESS_ID
     end
 
     it 'should instantiate the trypaper api' do
-      post '/upload_document', {:name => "Patrick", :return_address_id => "555_main_street", :api_key => "FAKEKEY"}
+      post '/upload_document', {:name => "Patrick", :return_address_id => RETURN_ADDRESS_ID, :api_key => TEST_API_KEY}
       @client.must_be_kind_of String
     end
 

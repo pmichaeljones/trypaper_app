@@ -43,9 +43,9 @@
               %label.white.has-tip{:title => "Single: Print Document Once <br> Duplicate: Print Document Twice <br> Triplicate: Print Three Times", data:{tooltip:'', html:true}, aria:{haspopup:"true"} }Print Quantity
               %input{:type => "radio", :name => "quantity", :value =>"Single", :id => "quantitySingle"}
               %label.white{:for => "quantitySingle"} Single
-              %input{:type => "radio", :name => "quantity", :value =>"Duplicate", :id => "quantityDuplicate"}
+              %input{:type => "radio", :name => "quantity", :value =>"duplicate_contents", :id => "quantityDuplicate"}
               %label.white{:for => "quantityDuplicate"} Duplicate
-              %input{:type => "radio", :name => "quantity", :value =>"Triplicate", :id => "quantityTriplicate"}
+              %input{:type => "radio", :name => "quantity", :value =>"triplicate_contents", :id => "quantityTriplicate"}
               %label.white{:for => "quantityTriplicate"} Triplicate
             .small-12.large-6.column
               %label.white.has-tip{:title => "Duplex: Front & Back Printing <br> B & W: Print Color Document in B&W", data:{tooltip:'', html:true}, aria:{haspopup:"true"} } Optional Printing Tags
