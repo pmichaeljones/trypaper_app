@@ -23,6 +23,7 @@ describe 'TryPaper Web App' do
 
     it 'should parse API key from params' do
       post '/upload_document', {:name => "Patrick", :return_address_id => "555_main_street", :api_key => "FAKEKEY"}
+      binding.pry
       @api_key.must_equal "FAKEKEY"
     end
 
