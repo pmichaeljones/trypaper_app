@@ -15,7 +15,6 @@ describe 'TryPaper Web App' do
     it 'renders index template' do
       get '/'
       last_response.body.must_include "TryPaper.com PDF Mailing App"
-      binding.pry
     end
 
   end

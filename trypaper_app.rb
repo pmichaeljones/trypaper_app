@@ -1,11 +1,13 @@
 require 'sinatra'
 require 'TryPaper'
+require 'pry'
 
 get '/' do
   haml :index
 end
 
 post '/' do
+  verify_params(params)
   api_key = params[:api_key]
   return_id = params[:return_address_id]
   @tags = []
@@ -32,8 +34,20 @@ end
 def parse_api_reply(reply)
   case reply.code
   when "201"
-    {api_reply: "Document successfully sent to TryPaper. Check API logs for details."}
+    {api_reply: "Document successfully sent to TryPaper. Check <a href='https://www.trypaper.com/Printroom/APIHistory' class='black-link'>API logs</a> for details."}
   else
-    {bad_reply: "There was an error sending document to TryPaper. Check API logs for details."}
+    {bad_reply: "There's been a paper jam! Your document was not sent. Check <a href='https://www.trypaper.com/Printroom/APIHistory' class='black-link'>API logs</a> for details."}
   end
 end
+
+def verify_params(params)
+  if params[:uploaded_file] == nil
+    halt haml :index, locals: {bad_reply: "You must upload a document."}
+  end
+end
+
+
+
+
+
+
