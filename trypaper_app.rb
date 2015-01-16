@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'TryPaper'
-require 'pry'
 
 get '/' do
   haml :index
@@ -26,18 +25,15 @@ post '/' do
   client.document = doc
   client.recipient = recipient
   reply = client.submit
-  binding.pry
-  haml :index, locals: {api_reply: parse_api_reply(reply)}
+  haml :index, locals: parse_api_reply(reply)
 end
 
 
 def parse_api_reply(reply)
   case reply.code
   when "201"
-    "Document successfully sent to TryPaper. Check API logs for details."
+    {api_reply: "Document successfully sent to TryPaper. Check API logs for details."}
   else
-    "There was an error sending document to TryPaper. Check API logs for details."
+    {bad_reply: "There was an error sending document to TryPaper. Check API logs for details."}
   end
 end
-
-

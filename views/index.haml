@@ -64,6 +64,10 @@
                 .alert-box.info.radius{data:{alert:''}}
                   = locals[:api_reply]
                   %a.close{:href => "#"} x
+              - if locals[:bad_reply]
+                .alert-box.alert.radius{data:{alert:''}}
+                  = locals[:bad_reply]
+                  %a.close{:href => "#"} x
       %hr.white
         %p.white.centered
           Powered by
