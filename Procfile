@@ -1,0 +1,1 @@
+web: bundle exec ruby trypaper_app.rb -p $PORT
