@@ -5,6 +5,6 @@ gem "rake"
 gem "shotgun"
 gem "haml"
 gem "foundation"
-gem "trypaper", '>=2.0.0'
+gem "trypaper"
 gem "rack-test"
 
