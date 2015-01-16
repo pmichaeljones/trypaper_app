@@ -1,4 +1,3 @@
-Bundler.require
 require 'sinatra'
 require 'trypaper'
 
