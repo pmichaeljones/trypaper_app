@@ -6,7 +6,7 @@ get '/' do
   haml :index
 end
 
-post '/upload_document' do
+post '/' do
   api_key = params[:api_key]
   return_id = params[:return_address_id]
   @tags = []
@@ -27,6 +27,17 @@ post '/upload_document' do
   client.recipient = recipient
   reply = client.submit
   binding.pry
-  haml :index, locals: {api_reply: reply}
+  haml :index, locals: {api_reply: parse_api_reply(reply)}
 end
+
+
+def parse_api_reply(reply)
+  case reply.code
+  when "201"
+    "Document successfully sent to TryPaper. Check API logs for details."
+  else
+    "There was an error sending document to TryPaper. Check API logs for details."
+  end
+end
+
 
