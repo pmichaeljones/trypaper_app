@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'TryPaper'
+require 'pry'
 
 get '/' do
   haml :index
@@ -24,7 +25,8 @@ post '/upload_document' do
   recipient = TryPaper::Recipient.new(params[:name], params[:address1], params[:address2], params[:city], params[:state], params[:zipcode])
   client.document = doc
   client.recipient = recipient
-  api_reply = client.submit
-  haml :index
+  reply = client.submit
+  binding.pry
+  haml :index, locals: {api_reply: reply}
 end
 

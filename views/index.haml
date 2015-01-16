@@ -60,9 +60,9 @@
             .small-12.large-5.columns.centered
               %input.button.radius.orange-button.push-down-button{:type => "submit", :value => "Print & Mail Document"}
             .small-12.column.centered
-              - if @api_reply
+              - if locals[:api_reply]
                 .alert-box.info.radius{data:{alert:''}}
-                  = @api_reply
+                  = locals[:api_reply].message
                   %a.close{:href => "#"} x
       %hr.white
         %p.white.centered

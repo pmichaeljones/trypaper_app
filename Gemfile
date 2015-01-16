@@ -8,3 +8,8 @@ gem "foundation"
 gem "trypaper"
 gem "rack-test"
 
+group :development do
+  gem 'pry'
+end
+
+
