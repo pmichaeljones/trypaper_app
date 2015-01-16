@@ -1,3 +1,6 @@
+require 'sinatra'
+require 'trypaper'
+
 get '/' do
   haml :index
 end
