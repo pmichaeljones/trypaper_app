@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'TryPaper'
-require 'pry'
 
 get '/' do
   haml :index
