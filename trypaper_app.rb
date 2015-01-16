@@ -1,5 +1,5 @@
+Bundler.require
 require 'sinatra'
-require 'trypaper'
 
 get '/' do
   haml :index
