@@ -7,16 +7,6 @@ gem "haml"
 gem "foundation"
 gem "trypaper", '>=2.0.0'
 gem "bundler"
-
-group :test do
-  gem "rack-test"
-end
-
-group :development do
-  gem 'pry'
-end
-
-group :production do
-end
-
+gem "pry"
+gem "rack-test"
 
