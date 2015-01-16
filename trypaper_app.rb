@@ -1,5 +1,5 @@
-require "sinatra"
-require "trypaper"
+require 'sinatra'
+require 'trypaper'
 
 get '/' do
   haml :index
