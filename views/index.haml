@@ -9,6 +9,16 @@
         .thin-title
           Mail PDF Files to Physical Addresses
       %hr.white
+      .small-10.small-centered.column
+        %ul.no-bullet.white
+          %li
+            1. Sign up for a free account at
+            %a.orange{:href => "http://trypaper.com", :target => "_blank"}TryPaper.com
+            (credit card required to start printing)
+          %li 2. Create "Return Address ID" inside your TryPaper account
+          %li 3. Copy and paste "Production API Key" and "Return Address ID" from TryPaper account into boxes below
+          %li 4. Enter recipient info, choose printing options, upload document and click "Print"
+          %li 5. Confirmation message will display success message or notify you of any errors
       .small-10.small-centered.columns
         %form.custom{:action => "/", :enctype => "multipart/form-data", :method => "POST"}
           %fieldset

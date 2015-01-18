@@ -1,3 +1,7 @@
+p, li {
+  font-family: raleway;
+}
+
 label {
   font-size: 18px;
   font-weight: 200;
