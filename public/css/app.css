@@ -30,7 +30,7 @@ input[type="file"] {
 }
 
 .homepage-image{
-  opacity: .6;
+  opacity: .75;
 }
 
 .homepage-title {
@@ -58,7 +58,7 @@ a:hover {
 }
 
 .push-down {
-  padding-top: 5%;
+  padding-top: 15%;
 }
 
 .centered {
